@@ -1,8 +1,8 @@
 let path=require('path');
-let html = require('html-webpack-plugin');
+let html=require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: {
         bundle: path.resolve(__dirname,'./src/index.js'),            
     },
@@ -10,7 +10,7 @@ module.exports = {
         filename: '[name].[contenthash].js',
         path:path.resolve(__dirname, 'dist'),
         clean:true,
-        assetModuleFilename:'[name][ext]',
+        assetModuleFilename:'[name].[contenthash][ext]',
     },
     devtool: 'inline-source-map',
     devServer: {
@@ -29,7 +29,7 @@ module.exports = {
                 use: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.(jpg|jpeg|png|svg|gif)$/i,
+                test: /\.(jpe?g|png|svg|gif)$/i,
                 type: 'asset/resource',
             },
         ],
