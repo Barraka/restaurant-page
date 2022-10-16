@@ -43,6 +43,5 @@ export default function loadpage() {
     title2.textContent="Quality Burgers";
     headeritem1.textContent="Home";
     headeritem2.textContent="Menu";
-    headeritem3.textContent="Contact";
-    titlebg.style.height=title.clientHeight+'px';    
+    headeritem3.textContent="Contact";   
 }

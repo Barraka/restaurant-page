@@ -6,7 +6,6 @@ import gomenu from './menu.js';
 import gocontact from './contact.js';
 import animatemenu from './menuanimation.js';
 import loadpage from './loadpage.js';
-import resetsize from './resetsize.js';
 
 loadpage();
 gohome();
@@ -20,4 +19,3 @@ headeritem2.addEventListener('click',gomenu);
 headeritem3.addEventListener('click',gocontact);
 
 window.animatemenu=animatemenu;
-setTimeout(resetsize,100);
